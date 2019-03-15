@@ -1,0 +1,55 @@
+﻿@model Microondas.Domain.ViewModels.ProgramaViewModel
+@{
+    ViewBag.Title = "Create";
+}
+<div class="page-header">
+    <h1>Programa</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                @using (Html.BeginForm("Create", "Programa", FormMethod.Post, new { @id = "micoondasForm", role = "form" }))
+                {
+                    @Html.AntiForgeryToken();
+                    HtmlHelper.UnobtrusiveJavaScriptEnabled = true;
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Nome)
+                        @Html.TextBoxFor(m => m.Nome, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Nome, "", new { @class = "text-danger " })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Instrucoes)
+                        @Html.TextBoxFor(m => m.Instrucoes, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Instrucoes, "", new { @class = "text-danger " })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Tempo)
+                        @Html.TextBoxFor(m => m.Tempo, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Tempo, "", new { @class = "text-danger " })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Potencia)
+                        @Html.TextBoxFor(m => m.Potencia, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Potencia, "", new { @class = "text-danger " })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.TipoAlimento)
+                        @Html.TextBoxFor(m => m.TipoAlimento, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.TipoAlimento, "", new { @class = "text-danger " })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Caractere)
+                        @Html.TextBoxFor(m => m.Caractere, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Caractere, "", new { @class = "text-danger " })
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

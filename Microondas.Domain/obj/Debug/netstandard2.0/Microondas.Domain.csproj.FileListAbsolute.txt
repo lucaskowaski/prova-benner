@@ -1,0 +1,12 @@
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\bin\Debug\netstandard2.0\Microondas.Domain.deps.json
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\bin\Debug\netstandard2.0\Microondas.Domain.dll
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\bin\Debug\netstandard2.0\Microondas.Domain.pdb
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\obj\Debug\netstandard2.0\Microondas.Domain.csprojResolveAssemblyReference.cache
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\obj\Debug\netstandard2.0\Microondas.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\obj\Debug\netstandard2.0\Microondas.Domain.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\obj\Debug\netstandard2.0\Microondas.Domain.AssemblyInfo.cs
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\obj\Debug\netstandard2.0\Microondas.Domain.dll
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\obj\Debug\netstandard2.0\Microondas.Domain.pdb
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\bin\Debug\netstandard2.0\System.ComponentModel.DataAnnotations.dll
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\lucas\Documents\1-microondas\Microondas\Microondas.Domain\bin\Debug\netstandard2.0\System.Security.dll

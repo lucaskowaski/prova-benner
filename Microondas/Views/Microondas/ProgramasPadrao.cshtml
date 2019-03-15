@@ -1,0 +1,45 @@
+﻿@using Microondas.Domain.ViewModels
+
+@PrintLista(ViewBag.padroes, "Programas")
+
+@if (ViewBag.customizados != null)
+{
+    @PrintLista(ViewBag.customizados, "Programas Customizados")
+}
+@helper PrintLista(List<ProgramaViewModel> lista, string title)
+    {
+        <div id="contentTable">
+            <h3>@title</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Nome</td>
+                        <td>Instruções</td>
+                        <td>TipoAlimento</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (ProgramaViewModel p in lista)
+                    {
+                        <tr>
+                            <td>@p.Nome</td>
+                            <td>@p.Instrucoes</td>
+                            <td>@p.TipoAlimento</td>
+                            <td>
+                                <button class="btn btn-info iniciarPrograma"
+                                        data-alimento="@p.TipoAlimento"
+                                        data-id="@p.Id"
+                                        data-caractere="@p.Caractere"
+                                        data-potencia="@p.Potencia"
+                                        data-tempo="@p.Tempo">
+                                    Iniciar
+                                </button>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+}

@@ -1,0 +1,61 @@
+﻿@model Microondas.Domain.ViewModels.MicroondasViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<div class="page-header">
+    <h1>Configurar Micoondas</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                @using (Html.BeginForm("Ligar", "Microondas", FormMethod.Post, new { @id = "micoondasForm", role = "form" }))
+                {
+                    @Html.AntiForgeryToken();
+                    HtmlHelper.UnobtrusiveJavaScriptEnabled = false;
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Alimento)
+                        @Html.TextBoxFor(m => m.Alimento, new { @class = "form-control" })
+                    </div>
+                    <h3>Configurações</h3>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Tempo)
+                        @Html.TextBoxFor(m => m.Tempo, new { @class = "form-control" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Potencia)
+                        @Html.TextBoxFor(m => m.Potencia, new { @class = "form-control" })
+                    </div>
+                    <button id="btnLigar" type="button" class="btn btn-primary">Ligar</button>
+                    <button id="btnInicioRapido" type="button" class="btn btn-primary">inicio Rápido</button>
+                    <button id="btnPausar" data-action="pausar" type="button" class="btn btn-warning">Pausar</button>
+                    <button id="btnCancelar" type="button" class="btn btn-danger">Cancelar</button>
+                }
+            </div>
+            <div id="alimentoAquecido">
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="programas-content">
+                <div class="form-inline form-group">
+                    <div class="form-group">
+                        <input id="inputPerqTerm" type="text" class="form-control" />
+                    </div>
+                    <button type="button" id="btnPerquisar" class="btn btn-info">Pesquisar</button>
+                    @Html.ActionLink("Novo Programa", "Create", "Programa", null, new { @class = "btn btn-success" })
+                </div>
+                @Html.Action("ProgramasPadrao")
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script src="~/Scripts/form-validations-custom-layout.js"></script>
+    <script src="~/Scripts/messages.js"></script>
+    <script src="~/Scripts/Micoondas/index.js"></script>
+}
